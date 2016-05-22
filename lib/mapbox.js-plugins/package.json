@@ -1,0 +1,31 @@
+{
+  "name": "mapbox.js-plugins",
+  "version": "0.0.0",
+  "description": "a collection of useful plugins made available",
+  "main": "build.js",
+  "scripts": {
+    "start": "set -e;  node exists.js; aws s3 sync --acl public-read plugins s3://mapbox-js/mapbox.js/plugins/; echo ' -- DEPLOYED --'",
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/mapbox.js-plugins.git"
+  },
+  "keywords": [
+    "map",
+    "plugins",
+    "leaflet",
+    "mapbox.js"
+  ],
+  "author": "Tom MacWright",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mapbox/mapbox.js-plugins/issues"
+  },
+  "dependencies": {
+    "mime": "~1.2.11"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  }
+}

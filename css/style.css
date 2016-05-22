@@ -1,0 +1,178 @@
+/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+body {
+  margin-top: 0;
+  padding:0;
+  /*
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  */
+}
+#map {position:absolute; top: 0; bottom:0; width:100%;}
+#inputs,
+#errors,
+#directions {
+  position: absolute;
+  width: 33%;
+  /*
+  max-width: 300px;
+  min-width: 200px;
+  */
+}
+#inputs {
+  z-index: 100;
+  top: 10px;
+  left: 10px;
+}
+
+#directions {
+  z-index: 99;
+  background: rgba(0,0,0,.8);
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  /*
+  10%
+  */
+}
+
+.directionPlus
+{
+  height: 0%;
+}
+
+.directionMinus
+{
+  height: 30%;
+}
+
+#errors {
+  z-index: 8;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+  background: rgba(0,0,0,.25);
+  top: 90px;
+  left: 10px;
+}
+
+.ui-button {
+  display:block;
+  position:absolute;
+  top:50%;left:50%;
+  width:160px;
+  margin:-20px 0 0 -80px;
+  z-index:100;
+  text-align:center;
+  padding:10px;
+  border-radius:3px;
+}
+#geolocate{
+  text-decoration: none;
+}
+.leaflet-control-container{
+  visibility: hidden;
+}
+
+button.crosshair {
+  position:absolute;
+  left:10px;
+  color:#fff;
+  border-radius:3px;
+  text-decoration:none;
+  z-index: 9999;
+}
+button.navigation {
+  position:absolute;
+  left:70px;
+  color:#fff;
+  border-radius:3px;
+  text-decoration:none;
+  z-index: 9999;
+}
+#route_button{
+  position:absolute;
+  right: 1%;
+  color:#fff;
+  border-radius:3px;
+  text-decoration:none;
+  z-index:999;
+  /*
+
+  */
+}
+.routePlus
+{
+  bottom: 1%;
+}
+.routeMinus
+{
+  bottom: 30%;
+}
+.slideUp{
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+}
+.slideDown{
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+}
+/*
+ionic rating css
+*/
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 5px 10px;
+}
+ul.rating li i {
+  font-size: 30px;
+}
+.leaflet-popup-content{
+  text-align: center;
+}
+
+.ui-control {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  padding:10px;
+  z-index:100;
+  border-radius:3px;
+}
+
+/*
+css pointer
+*/
+
+.leaflet-overlay-pane path,
+.leaflet-marker-icon {
+  cursor: default;
+}
+.leaflet-clickable {
+  cursor: default;
+}
+
+/*
+Main css
+*/

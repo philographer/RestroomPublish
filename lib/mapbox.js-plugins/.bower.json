@@ -1,0 +1,13 @@
+{
+  "name": "mapbox.js-plugins",
+  "homepage": "https://github.com/mapbox/mapbox.js-plugins",
+  "_release": "656323b802",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "656323b802a1a91c86d184817a8c7fcb177e6f80"
+  },
+  "_source": "git://github.com/mapbox/mapbox.js-plugins.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/mapbox/mapbox.js-plugins.git"
+}

@@ -1,0 +1,425 @@
+{
+    "leaflet-hash": {
+        "prefix": "leaflet-hash",
+        "v": {
+            "0.2.1": {
+                "files": [
+                    "leaflet-hash.js"
+                ]
+            }
+        }
+    },
+    "leaflet-fullscreen": {
+        "prefix": "leaflet-fullscreen",
+        "v": {
+            "0.0.1": {
+                "files": [
+                    "Leaflet.fullscreen.min.js",
+                    "leaflet.fullscreen.css",
+                    "fullscreen@2x.png",
+                    "fullscreen.png"
+                ]
+            },
+            "0.0.2": {
+                "files": [
+                    "Leaflet.fullscreen.min.js",
+                    "leaflet.fullscreen.css",
+                    "fullscreen@2x.png",
+                    "fullscreen.png"
+                ]
+            },
+            "0.0.4": {
+                "files": [
+                    "Leaflet.fullscreen.min.js",
+                    "leaflet.fullscreen.css",
+                    "fullscreen@2x.png",
+                    "fullscreen.png"
+                ]
+            },
+            "1.0.1": {
+                "files": [
+                    "Leaflet.fullscreen.min.js",
+                    "leaflet.fullscreen.css",
+                    "fullscreen@2x.png",
+                    "fullscreen.png"
+                ]
+            }
+        }
+    },
+    "leaflet-draw": {
+        "prefix": "leaflet-draw",
+        "v": {
+            "0.2.2": {
+                "files": [
+                    "leaflet.draw.js",
+                    "leaflet.draw.css",
+                    "images/spritesheet-2x.png",
+                    "images/spritesheet.png"
+                ]
+            },
+            "0.2.3": {
+                "files": [
+                    "leaflet.draw.js",
+                    "leaflet.draw.css",
+                    "images/spritesheet-2x.png",
+                    "images/spritesheet.png"
+                ]
+            }
+        }
+    },
+    "leaflet-markercluster": {
+        "prefix": "leaflet-markercluster",
+        "v": {
+            "0.4.0": {
+                "files": [
+                    "leaflet.markercluster.js",
+                    "MarkerCluster.Default.css",
+                    "MarkerCluster.css"
+                ]
+            }
+        }
+    },
+    "leaflet-label": {
+        "prefix": "leaflet-label",
+        "v": {
+            "0.2.1": {
+                "files": [
+                    "leaflet.label.js",
+                    "leaflet.label.css"
+                ]
+            }
+        }
+    },
+    "leaflet-image": {
+        "prefix": "leaflet-image",
+        "v": {
+            "0.0.3": {
+                "files": [
+                    "leaflet-image.js"
+                ]
+            },
+            "0.0.4": {
+                "files": [
+                    "leaflet-image.js"
+                ]
+            }
+        }
+    },
+    "leaflet-locatecontrol": {
+        "prefix": "leaflet-locatecontrol",
+        "v": {
+            "0.21.0": {
+                "files": [
+                    "L.Control.Locate.js",
+                    "L.Control.Locate.ie.css",
+                    "L.Control.Locate.css",
+                    "L.Control.Locate.0.5.css",
+                    "images/locate_alt.png",
+                    "images/locate_alt.svg",
+                    "images/locate_touch_alt.png",
+                    "images/locate_touch.png",
+                    "images/locate.png",
+                    "images/locate.svg",
+                    "images/spinner.gif"
+                ]
+            },
+            "0.24.0": {
+                "files": [
+                    "L.Control.Locate.js",
+                    "L.Control.Locate.ie.css",
+                    "L.Control.Locate.css",
+                    "images/locate_alt.png",
+                    "images/locate_alt.svg",
+                    "images/locate_touch_alt.png",
+                    "images/locate_touch.png",
+                    "images/locate.png",
+                    "images/locate@2x.png",
+                    "images/locate.svg",
+                    "images/spinner.gif",
+                    "images/spinner@2x.gif"
+                ]
+            },
+            "0.25.0": {
+                "files": [
+                    "L.Control.Locate.js",
+                    "L.Control.Locate.ie.css",
+                    "L.Control.Locate.css",
+                    "css/animation.css",
+                    "css/locate-fa-codes.css",
+                    "css/locate-fa-embedded.css",
+                    "css/locate-fa-ie7-codes.css",
+                    "css/locate-fa-ie7.css",
+                    "css/locate-fa.css",
+                    "font/LICENSE.txt",
+                    "font/README.txt",
+                    "font/config.json",
+                    "font/locate-fa.eot",
+                    "font/locate-fa.svg",
+                    "font/locate-fa.ttf",
+                    "font/locate-fa.woff"
+                ]
+            },
+            "0.42.0": {
+                "files": [
+                    "css/font-awesome.css",
+                    "css/font-awesome.css.map",
+                    "css/font-awesome.min.css",
+                    "font/fontawesome-webfont.eot",
+                    "font/fontawesome-webfont.svg",
+                    "font/fontawesome-webfont.ttf",
+                    "font/fontawesome-webfont.woff",
+                    "font/fontawesome-webfont.woff2",
+                    "font/FontAwesome.otf",
+                    "L.Control.Locate.css",
+                    "L.Control.Locate.ie.css",
+                    "L.Control.Locate.ie.min.css",
+                    "L.Control.Locate.ie.min.css.map",
+                    "L.Control.Locate.mapbox.css",
+                    "L.Control.Locate.mapbox.min.css",
+                    "L.Control.Locate.mapbox.min.css.map",
+                    "L.Control.Locate.min.css",
+                    "L.Control.Locate.min.css.map",
+                    "L.Control.Locate.min.js",
+                    "L.Control.Locate.min.js.map"
+                ]
+            },
+            "0.43.0": {
+                "files": [
+                    "css/font-awesome.css",
+                    "css/font-awesome.min.css",
+                    "fonts/fontawesome-webfont.eot",
+                    "fonts/fontawesome-webfont.svg",
+                    "fonts/fontawesome-webfont.ttf",
+                    "fonts/fontawesome-webfont.woff",
+                    "fonts/fontawesome-webfont.woff2",
+                    "fonts/FontAwesome.otf",
+                    "L.Control.Locate.css",
+                    "L.Control.Locate.ie.css",
+                    "L.Control.Locate.ie.min.css",
+                    "L.Control.Locate.ie.min.css.map",
+                    "L.Control.Locate.mapbox.css",
+                    "L.Control.Locate.mapbox.min.css",
+                    "L.Control.Locate.mapbox.min.css.map",
+                    "L.Control.Locate.min.css",
+                    "L.Control.Locate.min.css.map",
+                    "L.Control.Locate.min.js",
+                    "L.Control.Locate.min.js.map"
+                ]
+            }
+        }
+    },
+    "leaflet-osm": {
+        "prefix": "leaflet-osm",
+        "v": {
+            "0.1.0": {
+                "files": [
+                    "leaflet-osm.js"
+                ]
+            }
+        }
+    },
+    "leaflet-zoomslider": {
+        "prefix": "leaflet-zoomslider",
+        "v": {
+            "0.7.0": {
+                "files": [
+                    "L.Control.Zoomslider.js",
+                    "L.Control.Zoomslider.css"
+                ]
+            }
+        }
+    },
+    "leaflet-heat": {
+        "prefix": "leaflet-heat",
+        "v": {
+            "0.1.0": {
+                "files": [
+                    "leaflet-heat.js"
+                ]
+            },
+            "0.1.3": {
+                "files": [
+                    "leaflet-heat.js"
+                ]
+            }
+        }
+    },
+    "leaflet-omnivore": {
+        "prefix": "leaflet-omnivore",
+        "v": {
+            "0.0.0": {
+                "files": [
+                    "leaflet-omnivore.min.js"
+                ]
+            },
+            "0.0.1": {
+                "files": [
+                    "leaflet-omnivore.min.js"
+                ]
+            },
+            "0.1.0": {
+                "files": [
+                    "leaflet-omnivore.min.js"
+                ]
+            },
+            "0.1.1": {
+                "files": [
+                    "leaflet-omnivore.min.js",
+                    "leaflet-omnivore.js"
+                ]
+            },
+            "0.1.2": {
+                "files": [
+                    "leaflet-omnivore.min.js",
+                    "leaflet-omnivore.js"
+                ]
+            },
+            "0.2.0": {
+                "files": [
+                    "leaflet-omnivore.min.js",
+                    "leaflet-omnivore.js"
+                ]
+            },
+            "0.3.1": {
+                "files": [
+                    "leaflet-omnivore.min.js",
+                    "leaflet-omnivore.js"
+                ]
+            }
+        }
+    },
+    "arc.js": {
+        "prefix": "arc.js",
+        "v": {
+            "0.1.0": {
+                "files": [
+                    "arc.js"
+                ]
+            }
+        }
+    },
+    "leaflet-minimap": {
+        "prefix": "leaflet-minimap",
+        "v": {
+            "1.0.0": {
+                "files": [
+                    "Control.MiniMap.css",
+                    "Control.MiniMap.js",
+                    "images/toggle.png"
+                ]
+            }
+        }
+    },
+    "geo-viewport": {
+        "prefix": "geo-viewport",
+        "v": {
+            "0.1.1": {
+                "files": [
+                    "geo-viewport.js"
+                ]
+            }
+        }
+    },
+    "geojson-extent": {
+        "prefix": "geojson-extent",
+        "v": {
+            "0.0.1": {
+                "files": [
+                    "geojson-extent.js"
+                ]
+            }
+        }
+    },
+    "leaflet-pip": {
+        "prefix": "leaflet-pip",
+        "v": {
+            "0.0.1": {
+                "files": [
+                    "leaflet-pip.js"
+                ]
+            },
+            "0.0.2": {
+                "files": [
+                    "leaflet-pip.js"
+                ]
+            },
+            "0.1.0": {
+                "files": [
+                    "leaflet-pip.min.js"
+                ]
+            }
+        }
+    },
+    "leaflet-geodesy": {
+        "prefix": "leaflet-geodesy",
+        "v": {
+            "0.1.0": {
+                "files": [
+                    "leaflet-geodesy.js"
+                ]
+            }
+        }
+    },
+    "mapbox-directions.js": {
+        "prefix": "mapbox-directions.js",
+        "v": {
+            "0.0.1": {
+                "files": [
+                    "mapbox.directions.css",
+                    "mapbox.directions.js",
+                    "mapbox.directions.png",
+                    "mapbox.directions.svg"
+                ]
+            },
+            "0.1.0": {
+                "files": [
+                    "mapbox.directions.css",
+                    "mapbox.directions.js",
+                    "mapbox.directions.png",
+                    "mapbox.directions.svg"
+                ]
+            },
+            "0.3.0": {
+                "files": [
+                    "mapbox.directions.css",
+                    "mapbox.directions.js",
+                    "mapbox.directions.png",
+                    "mapbox.directions.svg"
+                ]
+            },
+            "0.4.0": {
+                "files": [
+                    "mapbox.directions.css",
+                    "mapbox.directions.js",
+                    "mapbox.directions.png",
+                    "mapbox.directions.svg"
+                ]
+            }
+        }
+    },
+    "turf": {
+        "prefix": "turf",
+        "v": {
+            "1.3.0": {
+                "files": [
+                    "turf.min.js"
+                ]
+            },
+            "1.4.0": {
+                "files": [
+                    "turf.min.js"
+                ]
+            },
+            "2.0.0": {
+                "files": [
+                    "turf.min.js"
+                ]
+            },
+            "2.0.2": {
+                "files": [
+                    "turf.min.js"
+                ]
+            }
+        }
+    }
+}

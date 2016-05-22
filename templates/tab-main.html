@@ -1,0 +1,68 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700">
+<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Lato:400,300'>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<ion-view view-title="DashBoard" class="back">
+  <ion-content id="coco" has-header="true" data-tap-disabled="true" scroll="false">
+    <div class="content" >
+      <div class="container">
+        <header>
+          <div class="bio">
+            <img ng-src="img/poster.png" alt="background" class="bg">
+            <div class="desc">
+              <h2><b>@CodeForIncheon</b></h2>
+              <h3>Project Restroom</h3>
+              <h3>Find Nearest Restroom Service</h3>
+              <h3>#Restroom #Toilet #CivicHacking #CodeFor</h3>
+              <h3>#Nearest #BestChoice #clean</h3>
+            </div>
+          </div>
+
+          <div class="avatarcontainer">
+            <img ng-src="img/profile.jpg" alt="avatar" class="avatar">
+            <div class="hover">
+              <div class="fa fa-code"></div>
+            </div>
+          </div>
+
+        </header>
+
+        <div class="content">
+          <div class="data">
+            <ul>
+              <li>
+                <b>{{totalRestroom}}</b>
+                <span>Restroom</span>
+              </li>
+              <li>
+                <b>{{totalReview}}</b>
+                <span>Review</span>
+              </li>
+              <li>
+                <b>{{totalStar}}</b>
+                <span>Star</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="follow" ng-click="gotoMap()"> <div class="fa fa-street-view"></div> Find Restroom</div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+<!--
+<script>
+  //Follow Button Effect
+  $(document).ready(
+    function iniciar(){
+      $('.follow').on("click", function(){
+        $('.follow').css('background-color','#34CF7A');
+        $('.follow').html('<div class="icon-ok"></div> Following');
+      });
+    }
+  );
+</script>
+-->

@@ -1,0 +1,161 @@
+
+<ion-view view-title="map" ng-init="routeBoolean = true">
+  <ion-content has-header="true" data-tap-disabled="true" scroll="false">
+    <!--
+    <div id='output' class='ui-control'>
+      nowLocation: <code id='mousemove'></code><br/>
+    </div>
+    -->
+      <div id="map" center="center" markers="markers" style="min-height:100%;min-width:100%;" z-index="99999"></div>
+    <a href='javascript:void(0);' id="geolocate" class='button button-small button-calm ui-button' ng-click="navigate()">Find Nearest Restroom</a>
+    <button class="button ion-pinpoint button-calm crosshair" ng-class="routeBoolean == true ? 'routePlus slideUp' : 'routeMinus slideDown'" ng-click="centerNow()"></button>
+    <button class="button ion-navigate button-calm navigation" ng-class="routeBoolean == true ? 'routePlus slideUp' : 'routeMinus slideDown'" ng-click="navigate()"></button>
+    <div id='inputs'></div>
+    <div id='errors'></div>
+    <div id='directions' ng-class="routeBoolean == true ? 'directionPlus slideUp' : 'directionMinus slideDown'">
+      <div id='routes'></div>
+      <div id='instructions'></div>
+    </div>
+    <button id="route_button" class="button button-calm" ng-click="routeClick()" ng-class="routeBoolean == true ? 'ion-plus-circled routePlus slideUp' : 'ion-minus-circled routeMinus slideDown'">Route</button>
+  </ion-content>
+</ion-view>
+
+<script id="evaluate.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="dark">
+      <h1 class="title">평가하기</h1>
+      <button class="button button-clear ion-close" ng-click="closeModal(1)"></button>
+    </ion-header-bar>
+    <!-- 이거 사용중<ion-content class="content-stable" scroll="true" overflow-scroll="true"> -->
+    <ion-content class="content-stable">
+      <div class="list">
+          <button ng-repeat='i in rate_num' class="button button-icon ion-ios-star-outline rate_possible"  ng-click='rateStar(i)'></button>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">이름</span>
+          <input type="text" placeholder="좌표" ng-model="comment_article.name" readonly>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">위치</span>
+          <input type="text" placeholder="위치" ng-model="comment_article.loc" readonly>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">작성자 닉네임</span>
+          <input type="text" placeholder="작성자 닉네임" ng-model="comment_article.nickName">
+        </label>
+        <!-- <label class="item item-input item-floating-label"> -->
+        <label class="item item-input item-floating-label">
+          <span class="input-label">코멘트</span>
+          <input type="text" placeholder="코멘트" ng-model="comment_article.comment">
+        </label>
+        <label class="item item-input item-floating-label" style="display: none">
+          <span class="input-label">좌표</span>
+          <input placeholder="좌표" value="{{comment_article.lat}},{{comment_article.lng}}" readonly>
+        </label>
+        <button class="button button-block button-positive" ng-click="addComment();">Add Comment</button>
+        <button class="button button-block button-assertive" ng-click="closeModal(1);">Close</button>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+<script id="detail.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="dark">
+      <h1 class="title">상세보기</h1>
+      <button class="button button-clear ion-close" ng-click="closeModal(2)"></button>
+    </ion-header-bar>
+    <ion-content class="content-stable">
+      <div class="list card">
+        <div class="item item-avatar">
+          <img ng-src="img/restroom.png">
+          <label class="item item-input item-floating-label">
+            <span class="input-label"><b>이름</b></span>
+            <input type="text" placeholder="이름" ng-model="detail.name" readonly>
+          </label>
+        </div>
+        <div class="item item-body">
+          <label class="item item-input item-floating-label" ng-show="detail.address1">
+            <span class="input-label"><b>도로명주소</b></span>
+            <input type="text" placeholder="도로명주소" ng-model="detail.address1" readonly>
+          </label>
+          <label class="item item-input item-floating-label" ng-show="detail.address2">
+            <span class="input-label"><b>일반주소</b></span>
+            <input type="text" placeholder="일반주소" ng-model="detail.address2" readonly>
+          </label>
+          <label class="item item-input item-floating-label" ng-show="detail.division">
+            <span class="input-label"><b>종류</b></span>
+            <input type="text" placeholder="종류" ng-model="detail.division" readonly>
+          </label>
+          <label class="item item-input item-floating-label" ng-show="detail.agency">
+            <span class="input-label"><b>관리기관</b></span>
+            <input type="text" placeholder="관리기관" ng-model="detail.agency" readonly>
+          </label>
+          <label class="item item-input item-floating-label" ng-show="detail.contact">
+            <span class="input-label"><b>연락처</b></span>
+            <input type="text" placeholder="연락처" ng-model="detail.contact" readonly>
+          </label>
+          <label class="item item-input item-floating-label" ng-show="detail.open">
+            <span class="input-label"><b>개방시간</b></span>
+            <input type="text" placeholder="개방시간" ng-model="detail.open" readonly>
+          </label>
+        </div>
+      </div>
+      <br/>
+      <div class="list card" ng-repeat="obj in objs">
+        <div class="item item-avatar">
+          <img ng-src="img/icon-user-default.png">
+          <h2>{{obj.get('nickName')}}</h2>
+          <p>{{obj.get('createdAt') | date:'medium'}}</p>
+        </div>
+        <div class="item item-body">
+          <p>
+            {{obj.get('comment')}}
+          </p>
+          <p>{{obj.get('star')}} Star</p>
+        </div>
+        <div ng-show="$index == objs.length-1" class="item tabs tabs-secondary tabs-icon-left">
+          <button class="button button-block button-assertive icon ion-share" ng-click="closeModal(2);">Close</button>
+        </div>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+<script id="new.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="dark">
+      <h1 class="title">화장실 등록요청</h1>
+      <button class="button button-clear ion-close" ng-click="closeModal(3)"></button>
+    </ion-header-bar>
+    <ion-content class="content-stable">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>화장실 이름</b></span>
+          <input type="text" placeholder="화장실 이름" ng-model="newRestroom.name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>주소</b></span>
+          <input type="text" placeholder="주소" ng-model="newRestroom.address1">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>종류(개방화장실,공중화장실)</b></span>
+          <input type="text" placeholder="종류(개방화장실, 공중화장실)" ng-model="newRestroom.division">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>관리기관</b></span>
+          <input type="text" placeholder="관리기관" ng-model="newRestroom.agency">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>연락처</b></span>
+          <input type="text" placeholder="연락처" ng-model="newRestroom.contact">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><b>개방시간</b></span>
+          <input type="text" placeholder="개방시간" ng-model="newRestroom.open">
+        </label>
+          <input type="hidden" placeholder="경위도" ng-model="newRestroom.latlng">
+        <button class="button button-block button-positive" ng-click="addRestroom(newRestroom)">Add Restroom</button>
+        <button class="button button-block button-assertive" ng-click="closeModal(3);">Close</button>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
